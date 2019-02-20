@@ -1,0 +1,27 @@
+body {
+    background: #555;
+}
+
+#demo-list a{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+}
+
+.box
+{
+    width: 405px;
+    padding:20px;
+    background-color:#f0f0f0;
+    border:2px solid #3e82da;
+    border-radius:5px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.left{
+    display: inline-block;
+    padding: 10px;
+}
