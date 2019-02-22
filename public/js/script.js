@@ -15,19 +15,19 @@ jQuery(document).ready(function () {
     });
 
     $(document).on('click', '#modal_button',function(){
-        var shorten_url = $('#shorten_url').val();
-        var expression = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)+[a-zа-яё0-9]+([\-\.]{1}[a-zа-яё0-9]+)*\.[a-zа-яё]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
-        var regex = new RegExp(expression);
+        var _city = $('#_city').val();
+        var _name = $('#_name').val();
+        var _date = $('#_date').val();
         $('.alert-danger').html('');
         $('.alert-danger').css('display','none');
         $('#result').val('');
-        if(shorten_url.match(regex))
+        if(_city!='' && _name!='' && _date!='')
         {
             $('#customerModal').modal('show');
             $.ajax({
                 url : "/ajax",
                 method:"POST",
-                data:{shorten_url:shorten_url},
+                data:{_city:_city,_name:_name,_date:_date},
                 success:function(data){
                     if (data['have']){
                         jQuery('.alert-danger').show();
@@ -40,7 +40,7 @@ jQuery(document).ready(function () {
         }
         else
         {
-            alert("Укажите ссылку в верном формате! Например: https://mail.yandex.ru/");
+            alert("Заполните все поля!");
         }
     });
 

@@ -2,7 +2,7 @@
 <html >
 <head>
     <meta name="_token" content="{{csrf_token()}}" />
-    <title>Тестовое задание "укорачиватель ссылок"</title>
+    <title>Тестовое задание LARAVEL/SOAP</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,11 +13,29 @@
 <body>
         <div id="editor">
             <div class="box">
-                <div class="left">
-                    <input id="shorten_url" taborder="1" name="url" type="url" class="form-control" placeholder="Вставьте вашу ссылку" value="">
+                <div class="left text">
+                    Город:
                 </div>
-                <div class="left">
-                    <input type="button" id="modal_button" class="btn btn-info" value="Создать">
+                <div class="left inp">
+                    <input id="_city" taborder="1" class="form-control" placeholder="Укажите город" value="">
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="left text">
+                    Имя:
+                </div>
+                <div class="left inp">
+                    <input id="_name" taborder="1" class="form-control" placeholder="Укажите имя" value="">
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="left text">
+                    Дата:
+                </div>
+                <div class="left inp">
+                    <input id="_date" taborder="1" type="date" class="form-control" value="">
+                </div>
+                <div class="clear">&nbsp;</div>
+                <div class="center">
+                    <input type="button" id="modal_button" class="btn btn-info" value="Рассчитать">
                 </div>
             </div>
         </div>
